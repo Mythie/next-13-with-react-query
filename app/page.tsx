@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Greeting } from "../components/greeting";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -9,10 +10,9 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+        <div className={styles.description}>
+          <Greeting />
+        </div>
 
         <div className={styles.grid}>
           <a href="https://beta.nextjs.org/docs" className={styles.card}>
@@ -46,12 +46,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
